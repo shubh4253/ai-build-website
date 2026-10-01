@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#14231d">
+    <meta name="description" content="Explore a lost mountain palace, one cinematic chapter at a time.">
+    <title>Elsewhere | The Cloud Palace</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="journey.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="#home" aria-label="Elsewhere home">
+            <span class="brand-mark" aria-hidden="true">E</span>
+            <span>elsewhere<span class="brand-period">.</span></span>
+        </a>
+        <nav class="nav-links" aria-label="Journey chapters">
+            <a href="#courtyard">River gates</a>
+            <a href="#stay">Sanctuary</a>
+            <a href="#gardens">Sky gardens</a>
+        </nav>
+        <a class="header-link" href="#visit">Plan your visit <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <div class="chapter-progress" aria-label="Journey progress">
+        <span class="progress-label"><span id="chapter-number">01</span> / 05</span>
+        <div class="progress-track"><span id="progress-fill"></span></div>
+        <span class="progress-name" id="chapter-name">Arrival</span>
+    </div>
+
+    <main class="journey" id="journey">
+        <section class="scene scene-hero is-active" id="home" data-chapter="Arrival" aria-labelledby="hero-title">
+            <div class="scene-image" aria-hidden="true"></div>
+            <div class="scene-shade"></div>
+            <div class="scene-content hero-content">
+                <p class="eyebrow"><span class="eyebrow-rule"></span> Above the clouds <span class="eyebrow-dot"></span> A journey by Elsewhere</p>
+                <h1 id="hero-title">A kingdom<br>above the <em>clouds.</em></h1>
+                <p class="hero-description">Follow the river into a hidden world of golden temples, mountain air, and stories carved in stone.</p>
+                <a class="pill-button" href="#courtyard">Begin the journey <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="scene-footnote"><span>01 — 05</span><span>Scroll to wander</span><span>Somewhere above the clouds</span></div>
+        </section>
+
+        <section class="scene scene-courtyard" id="courtyard" data-chapter="River gates" aria-labelledby="courtyard-title">
+            <div class="scene-image" aria-hidden="true"></div>
+            <div class="scene-shade"></div>
+            <div class="scene-content split-content">
+                <p class="eyebrow"><span class="eyebrow-rule"></span> Chapter one · The river gates</p>
+                <h2 id="courtyard-title">Where the<br>mountains meet <em>the water.</em></h2>
+                <p class="scene-description">Cross the old stone bridges as the valley wakes. Waterfalls trace a silver path toward the first temple doors.</p>
+                <a class="scene-link" href="#stay">Follow the river <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="image-caption">The river gates · First light in the valley</p>
+        </section>
+
+        <section class="scene scene-stay" id="stay" data-chapter="High sanctuary" aria-labelledby="stay-title">
+            <div class="scene-image" aria-hidden="true"></div>
+            <div class="scene-shade"></div>
+            <div class="scene-content split-content">
+                <p class="eyebrow"><span class="eyebrow-rule"></span> Chapter two · The high sanctuary</p>
+                <h2 id="stay-title">A quieter<br>world, carved <em>in gold.</em></h2>
+                <p class="scene-description">Climb beyond the mist to the palace at the mountain's heart. Look closer: every tower holds a piece of the old kingdom.</p>
+                <a class="scene-link" href="#gardens">Climb higher <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="image-caption">The high sanctuary · A palace above the valley</p>
+        </section>
+
+        <section class="scene scene-gardens" id="gardens" data-chapter="Sky gardens" aria-labelledby="gardens-title">
+            <div class="scene-image" aria-hidden="true"></div>
+            <div class="scene-shade"></div>
+            <div class="scene-content split-content">
+                <p class="eyebrow"><span class="eyebrow-rule"></span> Chapter three · The sky gardens</p>
+                <h2 id="gardens-title">Take the<br>long way <em>through.</em></h2>
+                <p class="scene-description">Wind along hidden paths, pause above the falls, and watch the last light settle over the rooftops.</p>
+                <a class="scene-link" href="#visit">Plan your passage <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="image-caption">The sky gardens · Where the trail disappears</p>
+        </section>
+
+        <section class="scene scene-visit" id="visit" data-chapter="Your passage" aria-labelledby="visit-title">
+            <div class="scene-image" aria-hidden="true"></div>
+            <div class="scene-shade"></div>
+            <div class="scene-content visit-content">
+                <p class="eyebrow"><span class="eyebrow-rule"></span> Your next chapter starts here</p>
+                <h2 id="visit-title">Find your<br>way <em>upward.</em></h2>
+                <p class="scene-description">Choose a place in the valley and a day to begin. Your guide will help you find the right path.</p>
+                <button class="destination-toggle" id="destination-toggle" type="button" aria-expanded="false" aria-controls="trip-search">
+                    Choose a destination <span aria-hidden="true">+</span>
+                </button>
+                <form class="trip-search" id="trip-search" hidden>
+                    <label><span>Destination</span><input name="destination" type="search" placeholder="Try palace, river, or gardens" autocomplete="off"></label>
+                    <label><span>When</span><input name="date" type="date" aria-label="Travel date"></label>
+                    <button type="submit" aria-label="Find your chapter">Find your chapter <span aria-hidden="true">↗</span></button>
+                </form>
+                <p class="search-feedback" id="search-feedback" role="status" aria-live="polite"></p>
+            </div>
+            <p class="image-caption">The cloud kingdom · A journey of your own</p>
+        </section>
+    </main>
+
+    <nav class="chapter-dots" aria-label="Jump to a chapter">
+        <a class="chapter-dot is-current" href="#home" aria-label="Chapter 1: Arrival" aria-current="location"></a>
+        <a class="chapter-dot" href="#courtyard" aria-label="Chapter 2: River gates"></a>
+        <a class="chapter-dot" href="#stay" aria-label="Chapter 3: High sanctuary"></a>
+        <a class="chapter-dot" href="#gardens" aria-label="Chapter 4: Sky gardens"></a>
+        <a class="chapter-dot" href="#visit" aria-label="Chapter 5: Your passage"></a>
+    </nav>
+
+    <button class="help-launcher" id="help-launcher" type="button" aria-expanded="false" aria-controls="help-desk">
+        <span class="help-icon" aria-hidden="true">✳</span><span>Ask our trip guide</span>
+    </button>
+    <aside class="help-desk" id="help-desk" aria-label="Trip guide help desk" hidden>
+        <div class="help-header">
+            <div><span class="guide-status"></span><p class="help-kicker">ELSEWHERE CONCIERGE</p><h2>Your trip guide</h2></div>
+            <button class="help-close" id="help-close" type="button" aria-label="Close trip guide">×</button>
+        </div>
+        <div class="chat-messages" id="chat-messages" aria-live="polite">
+            <p class="chat-bubble guide-message">Hi, I'm your trip guide. Ask me about the palace, getting around, or planning a visit.</p>
+        </div>
+        <div class="quick-questions" aria-label="Common questions">
+            <button type="button" data-question="When is the best time to visit?">Best time to visit?</button>
+            <button type="button" data-question="How do I get around the valley?">Getting around</button>
+            <button type="button" data-question="What should I see nearby?">Nearby places</button>
+        </div>
+        <form class="chat-form" id="chat-form">
+            <label class="sr-only" for="chat-input">Ask the trip guide a question</label>
+            <input id="chat-input" name="message" placeholder="Ask us anything..." autocomplete="off" required>
+            <button type="submit" aria-label="Send message">↑</button>
+        </form>
+        <p class="guide-note">Trip guide · Instant answers, no booking required</p>
+    </aside>
+</body>
+</html>
